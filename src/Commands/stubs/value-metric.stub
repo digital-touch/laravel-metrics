@@ -1,0 +1,40 @@
+<?php
+
+namespace DummyNamespace;
+
+use DigitalTouch\Metrics\ValueMetric;
+use App\Models\Report;
+use Illuminate\Support\Carbon;
+use stdClass;
+
+class DummyClass extends ValueMetric
+{
+    public function cacheFor(): Carbon
+    {
+        return now()->addYear();
+    }
+
+    public function toObject(): stdClass
+    {
+        return (object)[
+            'label' => $this->label(),
+            'prefix' => $this->prefix(),
+            'calculated' => $this->calculate(),
+            'suffix' => $this->suffix(),
+            'calculatedDifference' => $this->calculateDifference(),
+            'component' => $this->component(),
+            'colSpan' => $this->colSpan()
+        ];
+    }
+
+    public function label(): string
+    {
+        return 'metrics.label';
+    }
+
+    public function calculate(): array
+    {
+        return $this->count(DummyModelClass::class);
+    }
+}
+

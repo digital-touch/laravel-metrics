@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace DigitalTouch\Metrics\Tests;
 
 class ExampleTest extends TestCase
 {
