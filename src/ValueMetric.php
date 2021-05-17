@@ -54,7 +54,7 @@ abstract class ValueMetric extends Metric
         return 'dashboard.start.metric-value';
     }
 
-    public abstract function toObject(): stdClass;
+    abstract public function toObject(): stdClass;
 
     /**
      * Returns the avarage based on a given eloquent model `$class` and its column `$column`.

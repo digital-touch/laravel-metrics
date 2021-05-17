@@ -9,6 +9,7 @@ final class Metrics
     public function add(Metric $metric): Metrics
     {
         array_push($this->metrics, $metric);
+
         return $this;
     }
 

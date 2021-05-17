@@ -2,9 +2,9 @@
 
 namespace DigitalTouch\Metrics\Tests;
 
+use DigitalTouch\Metrics\MetricsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use DigitalTouch\Metrics\MetricsServiceProvider;
 
 class TestCase extends Orchestra
 {
